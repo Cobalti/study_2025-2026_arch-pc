@@ -1,0 +1,27 @@
+#!/bin/bash
+
+source ./template/config/script/functions
+
+COURSE=$(check_course)
+
+if [[ -z "${COURSE}" ]]
+then
+    echo "Please use the correct course abbreviation"
+    list_courses | sort -k 2
+    exit 1
+fi
+
+set -a
+source ./template/config/course/"${COURSE}"
+
+[[ -z "${LABS}" ]] || lab ${LABS}
+[[ -z "${PROJECT_PERSONAL}" ]] || project_personal ${PROJECT_PERSONAL}
+[[ -z "${PROJECT_GROUP}" ]] || project_group ${PROJECT_GROUP}
+[[ -z "${PRESENTATION}" ]] || presentation ${PRESENTATION}
+[[ -z "${CODE}" ]] || get_code ${CODE}
+[[ -z "${EXTERNAL_COURSE}" ]] || project_personal ${EXTERNAL_COURSE}
+
+rm CHANGELOG.md
+
+## Edit package.json
+edit_package_json
