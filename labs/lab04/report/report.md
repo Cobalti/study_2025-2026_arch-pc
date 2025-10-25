@@ -86,8 +86,8 @@ indent: true
 
 ### Листинги программ
 
-#### hello.asm
-; hello.asm
+hello.asm
+```
 SECTION .data
 hello: DB 'Hello world!',10
 helloLen: EQU $-hello
@@ -105,7 +105,7 @@ _start:
     mov eax,1
     mov ebx,0
     int 80h
-
+```
 ### Вывод
 В ходе лабораторной работы была освоена процедура компиляции и сборки программ на ассемблере NASM. Изучены этапы трансляции, компоновки и запуска программ.
 
