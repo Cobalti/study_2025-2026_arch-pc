@@ -1,0 +1,10 @@
+# format.yml
+fontsize: 13pt
+mainfont: Times New Roman
+linestretch: 1.5
+geometry:
+- left=3cm
+- right=1.5cm
+- top=2cm
+- bottom=2cm
+indent: true
