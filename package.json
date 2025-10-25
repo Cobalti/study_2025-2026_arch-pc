@@ -1,0 +1,14 @@
+{
+  "name": "arch-pc",
+  "version": "1.0.0",
+  "description": "Архитектура ЭВМ",
+  "main": "index.js",
+  "repository": "git@github.com:Cobalti/study_2025-2026_arch-pc.git",
+  "author": "Samir Galiev <sammops25@gmail.com>",
+  "license": "CC-BY-4.0",
+    "config": {
+	"commitizen": {
+	    "path": "cz-conventional-changelog"
+	}
+    }
+}

@@ -1,0 +1,48 @@
+project:
+  title: "presentation"
+  output-dir: "_output"
+
+standalone: true
+self-contained: true
+
+## Generic options
+lang: ru-RU
+crossref:
+  lof-title: Список иллюстраций
+  lot-title: Список таблиц
+  lol-title: Листинги
+## Formats
+format:
+### Pdf output format
+  beamer:
+    toc: true
+    toc-title: Содержание
+    number-sections: true
+    colorlinks: false
+    toc-depth: 2
+    slide_level: 2
+    aspectratio: 169
+    section-titles: true
+    incremental: true
+    navigation: horizontal
+    theme: Montpellier
+    colortheme: seagull
+    # logo: _resources/image/logo_rudn.png
+    # theme: metropolis
+    # themeoptions: progressbar=frametitle,sectionpage=progressbar,numbering=fraction
+    csquotes: true
+    indent: true
+    header-includes: |
+      \usepackage{libertine}
+#### Language
+    babel-lang: russian
+    babel-otherlangs: english
+### Html output
+  revealjs:
+    transition: slide
+    margin: 0.2
+    smaller: true
+    slide-number: true
+    output-ext: html
+    theme: beige
+    logo: _resources/image/logo_rudn.png
