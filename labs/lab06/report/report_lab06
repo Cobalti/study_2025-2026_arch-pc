@@ -1,0 +1,19 @@
+---
+title: "Лабораторная работа №6"
+author: 
+  - name: "[Галиев Самир Салаватович]"
+    email: "[1032252590@rudn.ru]"
+    stud_id: "[1032252590]"
+  - name: "Российский университет дружбы народов"
+    country: "Россия"
+    city: "Москва"
+date: "15.11.2025"
+geometry:
+  - left=3cm
+  - right=1.5cm
+  - top=2cm
+  - bottom=2cm
+fontsize: 13pt
+linestretch: 1.5
+indent: true
+---
