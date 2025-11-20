@@ -1,0 +1,26 @@
+     1                                  section .data
+     2 00000000 11000000                a dd 17
+     3 00000004 17000000                b dd 23
+     4 00000008 2D000000                c dd 45
+     5                                  
+     6                                  section .text
+     7                                  global _start
+     8                                  _start:
+     9 00000000 A1[00000000]                mov eax, [a]
+    10 00000005 8B1D[04000000]              mov ebx, [b]
+    11 0000000B 8B0D[08000000]              mov ecx, [c]
+    12                                  
+    13 00000011 39D8                        cmp eax, ebx
+    14 00000013 7C02                        jl check_c
+    15 00000015 89D8                        mov eax, ebx
+    16                                  
+    17                                  check_c:
+    18 00000017 39C8                        cmp eax, ecx
+    19 00000019 7C02                        jl print
+    20 0000001B 89C8                        mov eax, ecx
+    21                                  
+    22                                  print:
+    23                                      call iprintLF
+    23          ******************       error: symbol `iprintLF' not defined
+    24                                      call quit
+    24          ******************       error: symbol `quit' not defined
